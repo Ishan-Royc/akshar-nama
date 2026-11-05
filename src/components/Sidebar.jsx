@@ -191,7 +191,7 @@ export default function Sidebar({
 
           {/* GitHub Link Button */}
           <a
-            href="https://github.com"
+            href="https://github.com/Kumar-Aryan-99Pk/akshar-nama"
             target="_blank"
             rel="noopener noreferrer"
             className={`w-full flex items-center gap-2.5 p-2 rounded-2xl bg-base-100 hover:bg-base-200 border border-base-300 text-xs font-semibold text-base-content hover:text-primary transition-all shadow-sm group overflow-hidden whitespace-nowrap ${
