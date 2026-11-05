@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    text-rendering: geometricPrecision;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    line-height: 1.65;
+  }
+}
+
+@layer utilities {
+  /* Nastaliq script styling: full natural font metrics for high clarity & readability */
+  .font-nastaliq {
+    font-family: 'Noto Nastaliq Urdu', 'Gulzar', 'Amiri', 'Jameel Noori Nastaleeq', serif;
+    font-feature-settings: "kern" 1, "calt" 1;
+    line-height: 1.6;
+    padding-top: 0.05em;
+    padding-bottom: 0.1em;
+  }
+  
+  /* Inline Nastaliq for sentences where Urdu is mixed with English/Hindi */
+  .font-nastaliq-inline {
+    font-family: 'Noto Nastaliq Urdu', 'Gulzar', 'Amiri', serif;
+    font-feature-settings: "kern" 1, "calt" 1;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.35;
+    font-size: 1.15em;
+    padding: 0 0.15em;
+  }
+
+  .font-devanagari {
+    font-family: 'Noto Sans Devanagari', 'Tiro Devanagari Hindi', 'Kokila', sans-serif;
+    font-feature-settings: "kern" 1;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+  
+  .font-amiri {
+    font-family: 'Amiri', serif;
+  }
+}
+
+/* ========================================================= */
+/* THEME BUTTON HOVER CONTRAST FIX                           */
+/* Primary green toned down to vibrant, balanced #16a34a     */
+/* ========================================================= */
+
+.btn-primary {
+  color: #ffffff !important;
+}
+.btn-primary:hover {
+  color: #ffffff !important;
+  filter: brightness(0.93);
+}
+
+/* Dark theme specific button contrast overrides */
+[data-theme="dark"] .btn-primary {
+  background-color: #16a34a !important;
+  color: #ffffff !important;
+  border-color: #16a34a !important;
+}
+[data-theme="dark"] .btn-primary:hover {
+  background-color: #15803d !important;
+  color: #ffffff !important;
+  border-color: #15803d !important;
+}
+
+[data-theme="dark"] .btn-outline,
+[data-theme="dark"] .btn-ghost {
+  color: #f0f6fc !important;
+}
+[data-theme="dark"] .btn-outline:hover,
+[data-theme="dark"] .btn-ghost:hover {
+  background-color: #21262d !important;
+  color: #ffffff !important;
+  border-color: #30363d !important;
+}
+
+/* Verdant (Green & White) theme button contrast overrides */
+[data-theme="verdant"] .btn-primary {
+  background-color: #16a34a !important;
+  color: #ffffff !important;
+  border-color: #16a34a !important;
+}
+[data-theme="verdant"] .btn-primary:hover {
+  background-color: #15803d !important;
+  color: #ffffff !important;
+  border-color: #15803d !important;
+}
+[data-theme="verdant"] .btn-outline,
+[data-theme="verdant"] .btn-ghost {
+  color: #142918 !important;
+}
+[data-theme="verdant"] .btn-outline:hover,
+[data-theme="verdant"] .btn-ghost:hover {
+  background-color: #e6f4ea !important;
+  color: #16a34a !important;
+  border-color: #16a34a !important;
+}
+
+/* Retro theme button contrast overrides */
+[data-theme="retro"] .btn-primary {
+  background-color: #8A341B !important;
+  color: #FFF9ED !important;
+  border-color: #8A341B !important;
+}
+[data-theme="retro"] .btn-primary:hover {
+  background-color: #702914 !important;
+  color: #FFF9ED !important;
+  border-color: #702914 !important;
+}
+[data-theme="retro"] .btn-outline,
+[data-theme="retro"] .btn-ghost {
+  color: #2c2523 !important;
+}
+[data-theme="retro"] .btn-outline:hover,
+[data-theme="retro"] .btn-ghost:hover {
+  background-color: #E6D5C3 !important;
+  color: #2c2523 !important;
+  border-color: #8A341B !important;
+}
+
+/* Dracula theme button contrast overrides */
+[data-theme="dracula"] .btn-outline,
+[data-theme="dracula"] .btn-ghost {
+  color: #f8f8f2 !important;
+}
+[data-theme="dracula"] .btn-outline:hover,
+[data-theme="dracula"] .btn-ghost:hover {
+  background-color: #44475a !important;
+  color: #f8f8f2 !important;
+}
+
+/* Light theme button contrast overrides */
+[data-theme="light"] .btn-primary {
+  color: #ffffff !important;
+}
+[data-theme="light"] .btn-primary:hover {
+  color: #ffffff !important;
+}
+[data-theme="light"] .btn-outline,
+[data-theme="light"] .btn-ghost {
+  color: #1f2937 !important;
+}
+[data-theme="light"] .btn-outline:hover,
+[data-theme="light"] .btn-ghost:hover {
+  background-color: #f3f4f6 !important;
+  color: #111827 !important;
+}
+
+/* Hardware accelerated smooth fade */
+.view-enter {
+  animation: viewFadeIn 0.16s ease-out forwards;
+}
+
+@keyframes viewFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth lightweight scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 140, 140, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 140, 140, 0.45);
+}
+
+.canvas-container {
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
