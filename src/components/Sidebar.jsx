@@ -144,7 +144,7 @@ export default function Sidebar({
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`w-full flex items-center gap-3 px-3 py-2.5 sm:py-3 rounded-2xl text-left text-xs sm:text-sm font-semibold transition-all duration-200 overflow-hidden ${
+                className={`w-full flex items-center ${ isOpen ? 'gap-3' : 'gap-0' } justify-center px-3 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-200 overflow-hidden ${
                   isActive
                     ? 'bg-primary text-white shadow-sm'
                     : 'text-base-content/75 hover:text-base-content hover:bg-base-200/60'
@@ -172,7 +172,7 @@ export default function Sidebar({
         <div className="p-2.5 sm:p-3 border-t border-base-300 bg-base-200/30 overflow-hidden flex-shrink-0 space-y-1.5">
           <button
             onClick={onOpenThemeModal}
-            className={`w-full flex items-center gap-2.5 p-2 rounded-2xl bg-base-100 hover:bg-base-200 border border-base-300 text-xs font-semibold text-base-content transition-all shadow-sm group overflow-hidden whitespace-nowrap ${
+            className={`w-full flex items-center justify-center items-center ${isOpen ? 'gap-2.5' : 'gap-0'} p-2 rounded-2xl bg-base-100 hover:bg-base-200 border border-base-300 text-xs font-semibold text-base-content transition-all shadow-sm group overflow-hidden whitespace-nowrap ${
               !isOpen ? 'justify-center' : ''
             }`}
             title={`Theme: ${currentTheme} (Click to change)`}
@@ -194,9 +194,7 @@ export default function Sidebar({
             href="https://github.com/Kumar-Aryan-99Pk/akshar-nama"
             target="_blank"
             rel="noopener noreferrer"
-            className={`w-full flex items-center gap-2.5 p-2 rounded-2xl bg-base-100 hover:bg-base-200 border border-base-300 text-xs font-semibold text-base-content hover:text-primary transition-all shadow-sm group overflow-hidden whitespace-nowrap ${
-              !isOpen ? 'justify-center' : ''
-            }`}
+            className={`w-full flex justify-center items-center ${isOpen ? 'gap-2.5' : 'gap-0'} p-2 rounded-2xl bg-base-100 hover:bg-base-200 border border-base-300 text-xs font-semibold text-base-content hover:text-primary transition-all shadow-sm group overflow-hidden whitespace-nowrap`}
             title="GitHub Profile / Repository"
             aria-label="GitHub Profile / Repository"
           >

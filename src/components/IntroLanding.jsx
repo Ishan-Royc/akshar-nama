@@ -50,7 +50,7 @@ export default function IntroLanding({ currentPath, onPathSelect, onStartLearnin
                     क
                   </span>
                   <ArrowRight className="w-4 h-4 text-base-content/40 group-hover:translate-x-1 transition-transform" />
-                  <span className="w-11 h-11 rounded-2xl bg-base-200 text-base-content font-bold flex items-center justify-center text-2xl font-nastaliq shadow-sm">
+                  <span className="w-11 h-11 rounded-2xl bg-base-200 text-base-content font-bold flex items-center justify-center text-l font-nastaliq shadow-sm">
                     ک
                   </span>
                 </div>
@@ -99,7 +99,7 @@ export default function IntroLanding({ currentPath, onPathSelect, onStartLearnin
               
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <span className="w-11 h-11 rounded-2xl bg-primary text-primary-content font-bold flex items-center justify-center text-2xl font-nastaliq shadow-sm">
+                  <span className="w-11 h-11 rounded-2xl bg-primary text-primary-content font-bold flex items-center justify-center text-l font-nastaliq shadow-sm">
                     ک
                   </span>
                   <ArrowRight className="w-4 h-4 text-base-content/40 group-hover:translate-x-1 transition-transform" />
