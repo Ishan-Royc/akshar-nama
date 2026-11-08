@@ -127,7 +127,7 @@ export const ASPIRATED_COMPOUNDS = [
       medial: `${TATWEEL}ڑھ`,
       final: `${TATWEEL}ڑھ`,
     },
-    example: { hindi: "पढ़ना", urdu: "پڑھنا", roman: "Parhna", meaning: "To read" },
+    example: { hindi: "पढ़ना", urdu: "پڑھنا", roman: "Paṛhna", meaning: "To read" },
     notes: "Ṛe (ڑ) + Do-chashmi He (ھ) = ڑھ. Aspirated retroflex flap. Corresponds to ढ़ in Hindi.",
   },
   {
@@ -268,7 +268,7 @@ export const NUQTA_RULES = [
     ipa: "/ɽ/",
     translit: "ṛ",
     soundName: "Voiced Retroflex Flap",
-    explanation: "Native Indo-Aryan sound (tongue curling up and flapping down). Because ancient Devanagari did not have an independent letter for this allophone of ड, a Nuqta was introduced.",
+    explanation: "Native Indo-Aryan sound (tongue curling up and flapping down). Because ancient Devanagari did not have an independent letter for this reflex of ड, a Nuqta was introduced.",
     example: { hindi: "पेड़", urdu: "پیڑ", roman: "Peṛ", meaning: "Tree" },
   },
   {
@@ -637,7 +637,7 @@ export const VOCABULARY_BRIDGE = [
   {
     hindi: "सड़क",
     urdu: "سڑک",
-    translit: "Sadak",
+    translit: "Saṛak",
     ipa: "/sə.ɽək/",
     meaning: "Street / Road",
     category: "Core",
@@ -648,7 +648,7 @@ export const VOCABULARY_BRIDGE = [
       { ur: "ک", hi: "क", name: "Kaf" }
     ],
     breakdown: [
-      { hi: "सड़", ur: "سڑ", sound: "Sad", note: "Sin tooth linking downward to Ṛe with small Toe" },
+      { hi: "सड़", ur: "سڑ", sound: "Saṛ", note: "Sin tooth linking downward to Ṛe with small Toe" },
       { hi: "क", ur: "ک", sound: "k", note: "Isolated Kaf after non-connector Ṛe" }
     ],
     hindiBreakdown: [
