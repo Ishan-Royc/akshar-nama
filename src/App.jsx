@@ -95,6 +95,9 @@ export default function App() {
           onPathChange={setCurrentPath}
           currentTheme={theme}
           onOpenThemeModal={() => setThemeModalOpen(true)}
+          onViewChange={(view) => {
+            setActiveView(view);
+          }}
         />
 
         {/* Dynamic Page Views */}

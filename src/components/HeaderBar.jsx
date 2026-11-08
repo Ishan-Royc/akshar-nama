@@ -18,7 +18,8 @@ export default function HeaderBar({
   currentPath, 
   onPathChange, 
   currentTheme,
-  onOpenThemeModal
+  onOpenThemeModal,
+  onViewChange
 }) {
   const isHindiToUrdu = currentPath === 'hindi-to-urdu';
 
@@ -53,7 +54,7 @@ export default function HeaderBar({
             </button>
 
             {/* Stylized Latin Logo */}
-            <div className="flex items-center gap-2 sm:gap-2.5 select-none">
+            <div className="flex items-center gap-2 sm:gap-2.5 select-none cursor-pointer" onClick={() => onViewChange('intro')} >
               <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl sm:rounded-2xl bg-primary text-primary-content font-black text-base sm:text-lg flex items-center justify-center shadow-sm flex-shrink-0 font-sans tracking-tight">
                 A
               </div>
